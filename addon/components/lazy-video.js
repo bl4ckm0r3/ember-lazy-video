@@ -13,7 +13,7 @@ export default Ember.Component.extend({
   classNames        : [ 'lazyLoad-container' ],
   attributeBindings : [ 'style' ],
   videoThumbnail    : null,
-  providers         : inject('lazy-video-providers'),
+  providers         : inject.service('lazy-video-providers'),
 
   click() {
     set(this, 'isDisplayed', true);
